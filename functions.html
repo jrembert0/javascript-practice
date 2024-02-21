@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h2>Function basic assignment</h2>
+    <!-- Exercise 1 -->
+    <p>Write one number, it will be added 7</p>
+    <input class="numberInput" type="text">
+    <p class="result"></p>
+    <hr>
+    
+    <!-- Exercise 2 -->
+    <p>Write two numbers, they will be multiplied</p>
+    <input class="numberInput2" type="text">
+    <input class="numberInput3" type="text">
+    <p class="result2"></p>
+
+    <script>
+        // 1 - Write a function called add7 that takes one number and returns that number + 7. -->
+        const input = document.querySelector('.numberInput');
+        const para = document.querySelector('.result');
+
+        function add7(number){
+            return number + 7;
+        }
+
+        input.addEventListener("change", () => {
+        const num = parseFloat(input.value);
+        if (isNaN(num)) {
+            para.textContent = "You need to enter a number!";
+        } else {
+            para.textContent = `${num} + 7 = ${add7(num)}. `;
+        }
+        });
+        //End exercise one
+
+        // 2 - Write a function called multiply that takes 2 numbers and returns their product. 
+        const input2 = document.querySelector('.numberInput2');
+        const input3 = document.querySelector('.numberInput3');
+        const para2 = document.querySelector('.result2');
+
+        function multiply(number1, number2){
+            return number1 * number2;
+        }
+
+        input2.addEventListener("change", () => {
+            const num2 = parseFloat(input2.value);
+
+        input3.addEventListener("change", () => {
+        const num3 = parseFloat(input3.value);
+
+        if (isNaN(num2) && isNaN(num3)) {
+            para2.textContent = "You need to enter numbers!";
+        } else {
+            para2.textContent = `${num2} * ${num3} = ${multiply(num2, num3)}.a `;
+        }
+        });
+    </script>
+</body>
+</html>
