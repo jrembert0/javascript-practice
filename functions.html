@@ -17,6 +17,7 @@
     <p>Write two numbers, they will be multiplied</p>
     <input class="numberInput2" type="text">
     <input class="numberInput3" type="text">
+    <input class="calculateBtn"type="button" value="Calculate">
     <p class="result2"></p>
 
     <script>
@@ -41,24 +42,32 @@
         // 2 - Write a function called multiply that takes 2 numbers and returns their product. 
         const input2 = document.querySelector('.numberInput2');
         const input3 = document.querySelector('.numberInput3');
+        const calculateBtn = querySelector('.calculateBtn');
         const para2 = document.querySelector('.result2');
 
         function multiply(number1, number2){
             return number1 * number2;
         }
 
-        input2.addEventListener("change", () => {
-            const num2 = parseFloat(input2.value);
+        
 
+        
+
+        calculateBtn.addEventListener("click", () => {
+            input2.addEventListener("change", () => {
+            const num2 = parseFloat(input2.value);
+        });
         input3.addEventListener("change", () => {
         const num3 = parseFloat(input3.value);
-
-        if (isNaN(num2) && isNaN(num3)) {
+        });
+            if (isNaN(num2) && isNaN(num3)) {
             para2.textContent = "You need to enter numbers!";
         } else {
             para2.textContent = `${num2} * ${num3} = ${multiply(num2, num3)}.a `;
         }
         });
+    
+        
     </script>
 </body>
 </html>

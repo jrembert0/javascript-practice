@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 exercises</title>
+</head>
+<body>
+    <script>
+        // 1 - Write a function called add7 that takes one number and returns that number + 7. -->
+        function add7(number){
+            return number + 7;
+        }
+
+        let number = parseFloat(prompt('Type a number, it will added by 7'));
+        let result = add7(number);
+        alert(result );
+
+        // 2 - Write a function called multiply that takes 2 numbers and returns their product. 
+        function multiply(number2, number3){
+            return number2 * number3;
+        }
+        let number2 = parseFloat(prompt('Type a number'));
+        let number3 = parseFloat(prompt('Type another number'));
+        let result2 = multiply(number2, number3);
+        alert(result2);
+
+        //3 - Write a function called capitalize that takes a string and returns that string
+        // with only the first letter capitalized. Make sure that it can take strings that are
+        // lowercase, UPPERCASE or BoTh.
+        function capitalize(text){
+            let part = text.slice(1).toLowerCase(text);
+            let firstLetter = text.charAt(0).toUpperCase();
+            return firstLetter + part;
+        }
+
+        let text = prompt('Type a word');
+        let result3 = capitalize(text);
+        alert(result3);
+
+        //4- Write a function called lastLetter that takes a string and returns the very last
+        // letter of that string:
+        function lastLetter(text2){
+            let textLength = text2.length;
+            let lastChar = text2.charAt(textLength - 1);
+            return lastChar;
+        }
+        
+        let text2 = prompt('Type another Word');
+        let result4 = lastLetter(text2);
+        alert(result4)
+
+    </script>
+    
+</body>
+</html>
